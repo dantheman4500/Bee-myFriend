@@ -5,18 +5,11 @@ import { ADD_INTEREST, DELETE_PROFILE, UPDATE_BIO } from '../utils/mutations';
 import Auth from '../utils/auth';
 // imported elements from chakra UI
 import {
-  Box,
-  Avatar,
-  Link,
   Input,
   FormControl,
   FormLabel,
-  Center,
-  Divider,
   Button,
-  Flex,
   Heading,
-  Stack,
   Text,
   useBreakpointValue,
   useDisclosure,
@@ -27,10 +20,8 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalFooter,
-  Editable,
-  EditableInput,
-  EditablePreview,
-  Textarea
+  Textarea,
+  Center
 } from '@chakra-ui/react';
 
 // function to deal with handling adding interests, updating user bio, or deleting a user's profile
@@ -80,16 +71,19 @@ const UpdateProfile = (props) => {
     }
   }
 
-  const [userBioText, setUserBioText] = useState('');
+  const [userBio, setUserBio] = useState('');
   const [updateBio, { err }] = useMutation(UPDATE_BIO);
-  const handleBioUpdate = async () => {
+  // Function to update user bio
+  const handleBioUpdate = async (event) => {
     try {
       const { data } = await updateBio({
         variables: {
           profileId: profile._id,
-          userBio: userBioText
+          userBio
         }
-      })
+      });
+      console.log(userBio);
+      setUserBio('');
     } catch (err) {
       console.error(err)
     }
@@ -116,22 +110,31 @@ const UpdateProfile = (props) => {
         </Text>
       </Heading>
       <FormControl>
-        <FormLabel>Add more interests?</FormLabel>
+        <Center>
+          <FormLabel>Add more interests?</FormLabel>
+        </Center>
         <Input
           placeholder="i.e. Hiking"
           name="interest"
           type="interest"
           value={interest}
+          width="30%"
           onChange={(e) => setInterest(e.target.value)}
         />
-        <Button onClick={() => handleAddingInterest()}>Add</Button>
+        <Button onClick={() => handleAddingInterest()} margin="1%">Add</Button>
       </FormControl>
       <FormControl>
-        <FormLabel>
-          Update your bio?
-        </FormLabel>
-        <Textarea >{profile.userBio}</Textarea>
-        <Button>Update</Button>
+        <Center>
+        <FormLabel>Update your bio?</FormLabel>
+        </Center>
+        <Textarea
+          name="userBio"
+          type="userBio"
+          value={userBio}
+          onChange={(e) => setUserBio(e.target.value)}
+          width="70%"
+        ></Textarea>
+        <Button onClick={() => handleBioUpdate()} margin="2%">Update</Button>
       </FormControl>
       {/* Delete button modal */}
       <Button bg={"red.400"} size='lg' onClick={onOpen}>
