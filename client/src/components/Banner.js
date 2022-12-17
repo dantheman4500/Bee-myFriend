@@ -1,13 +1,14 @@
 import React from 'react';
+import SideBar from './Sidebar';
 
 // imported from chakra UI
-import { Box, Image, Text, Center, Link } from '@chakra-ui/react'
+import { Box, Image, Text, Center, Link, Button } from '@chakra-ui/react'
 
 function Banner() {
   return (
-    <div className="container">
+    // <div className="container">
       <Center>
-        <Box bg='orange.300' w='90%' p={4} color='white' fontSize={'4xl'} borderRadius='40'>
+        <Box bg='orange.300' w='100%' p={1} color='white' fontSize={'3xl'} borderRadius='xl'>
           <Center>
             <Image
               boxSize='60px'
@@ -16,13 +17,13 @@ function Banner() {
             />
           </Center>
           <Center>
-            <Text color={'black'} as='b' >
-              Bee My Friend
-            </Text>
+          <Text textColor="black" >
+            Bee My Friend
+          </Text>
           </Center>
         </Box>
       </Center>
-    </div>
+    // </div>
   );
 }
 

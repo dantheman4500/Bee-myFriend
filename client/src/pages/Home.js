@@ -97,7 +97,7 @@ function Home() {
           as={Box}
           textAlign={'center'}
           spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
+          py={{ base: 20, md: 30 }}>
           <Heading
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
@@ -118,11 +118,12 @@ function Home() {
               }
             />
           </Flex>
-          <Text color={'gray.500'}>
+          <Text color={'gray.200'}>
           Bee My Friend is your social media application for finding friends with shared interests without all the noise.   
-          Be real. Bee yourself. Bee my friend.
-            
+          Be real. Bee yourself. Bee my friend.            
           </Text>
+
+{/* Login Button Code */}
           <Stack
             direction={'column'}
             spacing={3}
@@ -131,7 +132,7 @@ function Home() {
             position={'relative'}>
             <Link href='/login'>
               <Button
-                colorScheme={'green'}
+                colorScheme={'blue'}
                 size="lg"
                 bg={'orange.400'}
                 rounded={'full'}
@@ -144,7 +145,7 @@ function Home() {
             </Link>
             <Button variant={'link'} colorScheme={'blue'} size={'med'}>
               <Link href='/signup'>
-                Not yet registered? Sign up today!
+              Not yet registered? Sign up today!
               </Link>
             </Button>
 

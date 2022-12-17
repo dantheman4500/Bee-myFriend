@@ -1,5 +1,4 @@
-
-import { Button, Stack} from '@chakra-ui/react';
+import { Button, Center, Stack, Text} from '@chakra-ui/react';
 import { Link } from 'react-router-dom'
 import "./styles.css"
 import { useLazyQuery } from '@apollo/client';
@@ -8,8 +7,6 @@ import React, { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
-
-
 
 const Donate = () => {
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
@@ -44,16 +41,21 @@ function submitCheckout(amount) {
 }
 
   return (
-    
+
 <div>
+        <Text color={'gray.500'}>
+          Bee My Friend is your social media application for finding friends with shared interests without all the noise.   
+          Be real. Bee yourself. Bee my friend. 
+        </Text>
+
 <Link className='backButton' to="/profile"><Button className='btn' backgroundColor='orange.300' >← Back</Button></Link>
-<Stack spacing={4} direction='row' align='center' size='md'>
+<Center><Stack spacing={4} direction='row' size='md'>
   <Button  onClick={ ()=>submitCheckout(5)} className='btn' backgroundColor='orange.300' size='lg'>$5.00</Button>
   <Button onClick={ ()=>submitCheckout(10)} className='btn' backgroundColor='orange.300' size='lg'>$10.00</Button>
   <Button onClick={ ()=>submitCheckout(20)} className='btn' backgroundColor='orange.300' size='lg'>$20.00</Button>
-  <Button onClick={ ()=>submitCheckout(100)} className='btn' backgroundColor='orange.300' size='lg'>$100.00</Button>
-  
-</Stack>
+  <Button onClick={ ()=>submitCheckout(100)} className='btn' backgroundColor='orange.300' size='lg'>$100.00</Button> 
+</Stack></Center>
 </div>
+
 )}
 export default Donate;

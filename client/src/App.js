@@ -60,7 +60,7 @@ function App() {
         <SideBar />
         <Router>
           <Box textAlign="center" fontSize="xl">
-            <Grid minH="100vh" p={3}>
+            <Grid minH="100vh" p={0}>
               <ColorModeSwitcher justifySelf="flex-end" />
               <VStack spacing={8}>
                   <div className="flex-column justify-flex-start min-100-vh">

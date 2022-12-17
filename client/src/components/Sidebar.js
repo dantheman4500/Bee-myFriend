@@ -15,7 +15,7 @@ import {
 import auth from '../utils/auth';
 const styles = {
     display: "flex-box",
-    float: "left",
+    // float: "left",
     flexWrap: "wrap",
     margin: "1%"
 }
@@ -38,7 +38,7 @@ function SideBar() {
                 <DrawerOverlay />
                 <DrawerContent>
                     <DrawerCloseButton />
-                    <DrawerHeader>Your Account</DrawerHeader>
+                    <DrawerHeader><Text color="orange.300">Your Account</Text></DrawerHeader>
                     <DrawerBody>
                         <Text><Link href='/Profile'> Go To Profile Page</Link></Text>
                         <br />
@@ -54,7 +54,7 @@ function SideBar() {
                     </DrawerBody>
 
                     <DrawerFooter>
-                        <Text>Bee My Friend<sup>&#169;</sup></Text>
+                        <Text>Bee My Friend <sup>&#169;</sup> 2022</Text>
                     </DrawerFooter>
                 </DrawerContent>
             </Drawer>

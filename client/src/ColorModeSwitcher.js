@@ -7,10 +7,19 @@ export const ColorModeSwitcher = props => {
   const text = useColorModeValue('dark', 'light');
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
+  const styles = {
+    display: "flex-box",
+    flexWrap: "wrap",
+    margin: "1%"
+  
+}
+
+
+
   return (
     <IconButton
-      size="md"
-      fontSize="lg"
+      size="lg"
+      fontSize="xl"
       aria-label={`Switch to ${text} mode`}
       variant="ghost"
       color="current"
@@ -18,6 +27,7 @@ export const ColorModeSwitcher = props => {
       onClick={toggleColorMode}
       icon={<SwitchIcon />}
       {...props}
+      style={styles}
     />
   );
 };
