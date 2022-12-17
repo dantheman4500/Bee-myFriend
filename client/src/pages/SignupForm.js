@@ -24,7 +24,7 @@ import {
 } from '@chakra-ui/react';
 
 // Signup props and logic for sign-up
-const SignUp = (props) => {
+const SignupForm = (props) => {
   const [errorFirstName, setErrorFirstName] = useState('');
   const [errorLastName, setErrorLastName] = useState('');
   const [errorEmail, setErrorEmail] = useState('');
@@ -284,4 +284,4 @@ const SignUp = (props) => {
   );
 };
 
-export default SignUp;
+export default SignupForm;

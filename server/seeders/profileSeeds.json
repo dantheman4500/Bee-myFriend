@@ -37,5 +37,128 @@
       "coding",
       "hiking"
     ]
+  },
+  {
+    "firstName": "Alberto",
+    "lastName": "Harrison",
+    "email": "Harrison@techfriends.dev",
+    "userBio": "Loves to play video games!",
+    "password": "password101",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "gaming",
+      "video games",
+      "coding",
+      "food",
+      "teaching"
+    ]
+  },
+  {
+    "firstName": "Jose",
+    "lastName": "T Hoag",
+    "email": "JTHoag@techfriends.dev",
+    "userBio": "I may not be perfect, but my dog thinks I am to die for",
+    "password": "password01",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "music",
+      "martial arts",
+      "dogs",
+      "dog",
+      "skiing",
+      "coding",
+      "food",
+      "teaching"
+    ]
+  },
+  {
+    "firstName": "Brittani",
+    "lastName": "Hughes",
+    "email": "bhughes@gmail.com",
+    "userBio": "Don't ever blame yourself if people can't accept you for who you are.",
+    "password": "password1994",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coding",
+      "food",
+      "teaching",
+      "social media fanatic",
+      "enterpreneur",
+      "camping",
+      "playing an instrument",
+      "guitar",
+      "flute",
+      "rapping"
+    ]
+  },
+  {
+    "firstName": "Margaret",
+    "lastName": "Bowers",
+    "email": "mb1992@aol.com",
+    "userBio": "I'm finishing off this bottle of wine because you never know when an asteroid is gonna hit and I'd hate to waste the $6.49 I spent on it.",
+    "password": "password166",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "quilting",
+      "food",
+      "floral arranging",
+      "folk music",
+      "swimming",
+      "beach",
+      "walk",
+      "running",
+      "fitness"
+    ]
+  },
+  {
+    "firstName": "Kathleen",
+    "lastName": "Hill",
+    "email": "kingofthehill@fakemeail.com",
+    "userBio": "Excuse me Ladies, but my eyes are up here.",
+    "password": "passwordisstrong",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "Monty Python and the holy grail",
+      "Money",
+      "food",
+      "cycling"
+    ]
+  },
+  {
+    "firstName": "Everett",
+    "lastName": "Weller",
+    "email": "idonthaveone@myemail.com",
+    "userBio": "I was having a fantastic nap on the way to work this morning, until some inconsiderate ba$tard decided to bounce off my windshield.",
+    "password": "forestgump94",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "rock",
+      "bowling",
+      "hiking",
+      "rock music",
+      "linkin park",
+      "meatballs",
+      "snowboarding"
+    ]
+  },
+  {
+    "firstName": "Ronnie",
+    "lastName": "Halliburton",
+    "email": "ayla.connel@gmail.com",
+    "userBio": "I'll date anyone who isn't an idiot, hints the reason I'm still single.",
+    "password": "password01",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "arts",
+      "design",
+      "entertainment",
+      "golfing",
+      "bird watching",
+      "metalworking",
+      "read",
+      "infleuncing",
+      "influencer"
+    ]
   }
+
 ]

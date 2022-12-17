@@ -1,6 +1,4 @@
 import React from 'react';
-import { Image } from '@chakra-ui/react'
-
 import {
   Avatar,
   Box,
@@ -12,6 +10,7 @@ import {
   Button,
   Stack,
   useColorModeValue,
+  Image
 } from '@chakra-ui/react';
 
 // Testimonial Card Styling Begins Here 
@@ -125,24 +124,26 @@ function Home() {
           </Text>
           <Stack
             direction={'column'}
-            spacing={3}
+            spacing={4}
             align={'center'}
             alignSelf={'center'}
             position={'relative'}>
-            <Link href='/login'>
+            <Link href='/login' _hover={{textDecoration: "none"}}>
               <Button
                 colorScheme={'green'}
                 size="lg"
                 bg={'orange.400'}
                 rounded={'full'}
-                px={40}
+                px={20}
+                height={20}
                 _hover={{
-                  bg: 'gray.400',
+                  bg: 'gray.500',
+                  textDecoration: "none"
                 }}>
-             <Text fontSize='4xl'>Login</Text> 
+             <Text fontSize='4xl' textAlign={"center"}>Login</Text> 
               </Button>
             </Link>
-            <Button variant={'link'} colorScheme={'blue'} size={'med'}>
+            <Button variant={'link'} colorScheme={'blue'} size={'med'} >
               <Link href='/signup'>
                 Not yet registered? Sign up today!
               </Link>
