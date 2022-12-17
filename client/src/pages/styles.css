@@ -5,12 +5,9 @@
     align-items: center;
     position: relative;
     top: 14vh;
-
-    left: 41.69%;
+    left: 35%;
     
 }
-
-
 
 .btn:hover{
     border:solid orange 2.5px;
@@ -21,3 +18,19 @@
     background-color: orange;
 }
 
+.donate-text{
+    padding: 2%;
+    margin-bottom: 9%;
+    align-self: center;
+    align-items: center;
+}
+
+.alert-msg {
+    font-size: medium;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 12px;
+    width: min-content;
+    height: min-content;
+    text-transform: initial;
+}

@@ -23,7 +23,9 @@ const profileSchema = new Schema({
     minlength: 5,
   },
   userBio: {
-    type: String
+    type: String,
+    required: false,
+    default: "This user has no bio yet."
   },
   image: {
     type: String,
@@ -32,6 +34,7 @@ const profileSchema = new Schema({
   interests: [
     {
       type: String,
+      required: false,
       default: "coding"
     }
   ]

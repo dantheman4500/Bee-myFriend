@@ -6,14 +6,19 @@ import {
     Center,
     Text,
     Stack,
+    VStack,
     Button,
-    Link,
-    Badge
+    Badge,
+    Divider
 } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 // import FriendList from '../components/FriendList';
 import { QUERY_SINGLE_PROFILE } from '../utils/queries';
+
+const styles = {
+    marginRight: "7%",
+}
 
 const SingleFriend = () => {
     const { profileId } = useParams();
@@ -28,7 +33,7 @@ const SingleFriend = () => {
         return <div>Loading...</div>;
     }
     return (
-        <Center py={6}>
+        <Center style={styles}>
             <Box
                 maxW={'320px'}
                 w={'full'}
@@ -43,49 +48,40 @@ const SingleFriend = () => {
                     alt={'Avatar Alt'}
                     mb={4}
                     pos={'relative'}
-                    _after={{
-                        content: '""',
-                        w: 4,
-                        h: 4,
-                        bg: 'green.300',
-                        border: '2px solid white',
-                        rounded: 'full',
-                        pos: 'absolute',
-                        bottom: 0,
-                        right: 3,
-                    }}
                 />
                 <Heading fontSize={'2xl'} fontFamily={'body'}>
-                {profile.name}
+                    {profile.firstName} {profile.lastName}
                 </Heading>
+                <Divider height={'50px'} borderColor='orange.300'/>
                 <Text
                     textAlign={'center'}
                     color={'white.400'}
                     px={3}>
-                    Actress, musician, songwriter and artist. PM for work inquires or{' '}
-                    <Link href={'#'} color={'blue.400'}>
-                        #tag
-                    </Link>{' '}
-                    me in your posts
+                    {profile.userBio}
                 </Text>
 
-                <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+                <VStack align={'center'} justify={'center'} direction={'row'} mt={6}>
                     {profile.interests.map((interest) => (
-                                            <Badge
-                                            px={2}
-                                            py={1}
-                                            bg={'white.800'}
-                                            fontWeight={'400'}>
-                                            {interest}
-                                        </Badge>
+                        <Badge
+                            px={2}
+                            py={1}
+                            bg={'white.800'}
+                            fontWeight={'400'}
+                            fontSize={'xl'}
+                            >
+                            {interest}
+                        </Badge>
                     ))}
-                </Stack>
+                </VStack>
 
                 <Stack mt={8} direction={'row'} spacing={4}>
                     <Button
                         flex={1}
                         fontSize={'sm'}
                         rounded={'full'}
+                        _hover={{
+                            bg: 'yellow.500'
+                        }}
                         _focus={{
                             bg: 'gray.200',
                         }}>
@@ -95,16 +91,11 @@ const SingleFriend = () => {
                         flex={1}
                         fontSize={'sm'}
                         rounded={'full'}
-                        bg={'blue.400'}
-                        color={'white'}
-                        boxShadow={
-                            '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
-                        }
                         _hover={{
-                            bg: 'blue.500',
+                            bg: 'yellow.500',
                         }}
                         _focus={{
-                            bg: 'blue.500',
+                            bg: 'gray.200',
                         }}>
                         Add
                     </Button>

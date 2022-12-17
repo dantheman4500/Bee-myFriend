@@ -37,5 +37,252 @@
       "coding",
       "hiking"
     ]
+  },
+  {
+    "firstName": "Alberto",
+    "lastName": "Harrison",
+    "email": "Harrison@techfriends.dev",
+    "userBio": "Loves to play video games!",
+    "password": "password101",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "gaming",
+      "video games",
+      "coding",
+      "food",
+      "teaching"
+    ]
+  },
+  {
+    "firstName": "Jose",
+    "lastName": "T Hoag",
+    "email": "JTHoag@techfriends.dev",
+    "userBio": "I may not be perfect, but my dog thinks I am to die for",
+    "password": "password01",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "music",
+      "martial arts",
+      "dogs",
+      "dog",
+      "skiing",
+      "coding",
+      "food",
+      "teaching"
+    ]
+  },
+  {
+    "firstName": "Brittani",
+    "lastName": "Hughes",
+    "email": "bhughes@gmail.com",
+    "userBio": "Don't ever blame yourself if people can't accept you for who you are.",
+    "password": "password1994",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coding",
+      "food",
+      "teaching",
+      "social media fanatic",
+      "enterpreneur",
+      "camping",
+      "playing an instrument",
+      "guitar",
+      "flute",
+      "rapping"
+    ]
+  },
+  {
+    "firstName": "Margaret",
+    "lastName": "Bowers",
+    "email": "mb1992@aol.com",
+    "userBio": "I'm finishing off this bottle of wine because you never know when an asteroid is gonna hit and I'd hate to waste the $6.49 I spent on it.",
+    "password": "password166",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "quilting",
+      "food",
+      "floral arranging",
+      "folk music",
+      "swimming",
+      "beach",
+      "walk",
+      "running",
+      "fitness"
+    ]
+  },
+  {
+    "firstName": "Kathleen",
+    "lastName": "Hill",
+    "email": "kingofthehill@fakemeail.com",
+    "userBio": "Excuse me Ladies, but my eyes are up here.",
+    "password": "passwordisstrong",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "Monty Python and the holy grail",
+      "Money",
+      "food",
+      "cycling"
+    ]
+  },
+  {
+    "firstName": "Everett",
+    "lastName": "Weller",
+    "email": "idonthaveone@myemail.com",
+    "userBio": "I was having a fantastic nap on the way to work this morning, until some inconsiderate ba$tard decided to bounce off my windshield.",
+    "password": "forestgump94",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "rock",
+      "bowling",
+      "hiking",
+      "rock music",
+      "linkin park",
+      "meatballs",
+      "snowboarding"
+    ]
+  },
+  {
+    "firstName": "Ronnie",
+    "lastName": "Halliburton",
+    "email": "ayla.connel@gmail.com",
+    "userBio": "I'll date anyone who isn't an idiot, hints the reason I'm still single.",
+    "password": "password01",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "arts",
+      "design",
+      "entertainment",
+      "golfing",
+      "bird watching",
+      "metalworking",
+      "read",
+      "infleuncing",
+      "influencer"
+    ]
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Miller",
+    "email": "bernie.spin@hotmail.com",
+    "userBio": "After years of hearing it, for once I would like to be the one saying, “Now get the hell out of my office!”",
+    "password": "password201",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "rock",
+      "mineral",
+      "mineral collecting",
+      "geo",
+      "pokemon",
+      "Gymnastics",
+      "South park"
+    ]
+  },
+  {
+    "firstName": "Keith",
+    "lastName": "J Cross",
+    "email": "bradly2017@hotmail.com",
+    "userBio": "Hiding in the restroom at work, just to post this (;",
+    "password": "password52",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coding",
+      "food",
+      "teaching",
+      "movie",
+      "movie watching",
+      "netflix",
+      "chill",
+      "astronomy",
+      "physics"
+    ]
+  },
+  {
+    "firstName": "Eduardo",
+    "lastName": "N Titus",
+    "email": "verner1973@gmail.com",
+    "userBio": "Anyone know how to get blood stains out of carpet? Totally unrelated, but I also am looking for a new girlfriend.",
+    "password": "password52",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "web",
+      "web surfing",
+      "web junkie",
+      "travel",
+      "sculpting",
+      "hulu",
+      "hang out",
+      "Genealogy",
+      "chemistry",
+      "CSI",
+      "supernatural",
+      "anime"
+    ]
+  },
+  {
+    "firstName": "Erlinda",
+    "lastName": "Madden",
+    "email": "hope1974@hotmail.com",
+    "userBio": "Dear Websites that automatically play loud videos, thanks for trying to get me fired!",
+    "password": "passwordnotgood",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coffee",
+      "internet",
+      "troll",
+      "lord of the rings",
+      "birdwatching",
+      "amazon",
+      "hikes",
+      "wrestling",
+      "language",
+      "Cops",
+      "Avatar: The Last Air Bender",
+      "PC"
+    ]
+  },
+  {
+    "firstName": "Ramon",
+    "lastName": "A Joe",
+    "email": "selena1996@yahoo.com",
+    "userBio": "I very much wished not to be noticed",
+    "password": "passwordnotgood",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "space",
+      "minecraft",
+      "boxing",
+      "UFC",
+      "cats",
+      "cat",
+      "Sonic",
+      "wrestling",
+      "language",
+      "Cops",
+      "The Hobbit",
+      "Marine"
+    ]
+  },
+  {
+    "firstName": "Diane",
+    "lastName": "M Valle",
+    "email": "ambrose2009@hotmail.com",
+    "userBio": "thinks that thinking about the thoughts of thinking are too thinkable for thoughts to be thought about thinking, I think",
+    "password": "passwordnotgood",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "Philosophy",
+      "pottery",
+      "organizer",
+      "Pintrest",
+      "Doordash",
+      "food",
+      "Snakes",
+      "Fight Club",
+      "The Flash",
+      "Knitting",
+      "Sewing",
+      "Army"
+    ]
   }
+
 ]

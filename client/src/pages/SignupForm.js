@@ -1,9 +1,10 @@
 // Import React, hooks, mutations, etc. for signUp page. 
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { validateEmail, checkInput, checkInterest } from '../utils/helpers';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import './styles.css'
 // Import styling from Chakra UI 
 import {
   Flex,
@@ -16,15 +17,28 @@ import {
   Stack,
   Button,
   Heading,
-  Text
+  Text,
+  Alert,
+  AlertIcon,
+  AlertDescription
 } from '@chakra-ui/react';
 
 // Signup props and logic for sign-up
-const SignUp = (props) => {
+const SignupForm = (props) => {
+  const [errorFirstName, setErrorFirstName] = useState('');
+  const [errorLastName, setErrorLastName] = useState('');
+  const [errorEmail, setErrorEmail] = useState('');
+  const [errorPassword, setErrorPassword] = useState('');
+  const [errorInterests, setErrorInterests] = useState('');
+  const [errorBioInput, setErrorBioInput] = useState('');
   const [formState, setFormState] = useState(
     {
+      firstName: '',
+      lastName: '',
       email: '',
       password: '',
+      userBio: '',
+      interests: []
     });
 
   const [createProfile] = useMutation(ADD_USER);
@@ -37,20 +51,46 @@ const SignUp = (props) => {
   // Signup logic to submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const mutationResponse = await createProfile({
-      variables: {
-        firstName: formState.firstName,
-        lastName: formState.lastName,
-        email: formState.email,
-        password: formState.password,
-        userBio: formState.userBio,
-        interests: userInterest.interests
-      },
-    });
-    console.log("test")
-    // Logic to authenticate user login
-    const token = mutationResponse.data.createProfile.token;
-    Auth.login(token);
+    let error = false;
+    if (!checkInput(formState.firstName)) {
+      setErrorFirstName('First Name is Required');
+      error = true;
+    }
+    if (!checkInput(formState.lastName)) {
+      setErrorLastName('Last Name is Required');
+      error = true;
+    }
+    if (!validateEmail(formState.email)) {
+      setErrorEmail('Valid Email Required');
+      error = true;
+    }
+    if (!checkInput(formState.password)) {
+      setErrorPassword('Password is Required');
+      error = true;
+    }
+    if (!checkInterest(formState.interests)) {
+      setErrorInterests('Select an Interest');
+      error = true;
+    }
+    if (!checkInput(formState.userBio)) {
+      setErrorBioInput('A Bio Required');
+      error = true;
+    }
+    else {
+      const mutationResponse = await createProfile({
+        variables: {
+          firstName: formState.firstName,
+          lastName: formState.lastName,
+          email: formState.email,
+          password: formState.password,
+          userBio: formState.userBio,
+          interests: userInterest.interests
+        },
+      });
+      // Logic to authenticate user login
+      const token = mutationResponse.data.createProfile.token;
+      Auth.login(token);
+    }
   };
 
   const handleChange = (event) => {
@@ -64,7 +104,6 @@ const SignUp = (props) => {
   const handleCheckboxes = (e) => {
     const { value, checked } = e.target;
     const { interests } = userInterest;
-    console.log(`${value} is ${checked}`);
     if (checked) {
       setUserInterest({
         interests: [...interests, value],
@@ -77,7 +116,6 @@ const SignUp = (props) => {
         options: interests.filter((e) => e !== value),
       });
     }
-    console.log(interests)
   }
 
   return (
@@ -109,6 +147,12 @@ const SignUp = (props) => {
                   value={formState.firstName}
                   onChange={handleChange}
                 />
+                {errorFirstName && (
+                  <Alert status='error' className='alert-msg'>
+                    <AlertIcon />
+                    <AlertDescription>{errorFirstName}</AlertDescription>
+                  </Alert>
+                )}
               </FormControl>
               <FormControl id="lastName">
                 <FormLabel>Last Name</FormLabel>
@@ -118,6 +162,12 @@ const SignUp = (props) => {
                   value={formState.lastName}
                   onChange={handleChange}
                 />
+                {errorLastName && (
+                  <Alert status='error' className='alert-msg'>
+                    <AlertIcon />
+                    <AlertDescription>{errorLastName}</AlertDescription>
+                  </Alert>
+                )}
               </FormControl>
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
@@ -127,6 +177,12 @@ const SignUp = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                {errorEmail && (
+                  <Alert status='error' className='alert-msg'>
+                    <AlertIcon />
+                    <AlertDescription>{errorEmail}</AlertDescription>
+                  </Alert>
+                )}
               </FormControl>
               <FormControl id="password">
                 <FormLabel>Password</FormLabel>
@@ -134,6 +190,12 @@ const SignUp = (props) => {
                   name='password'
                   placeholder='**********'
                   onChange={handleChange} />
+                {errorPassword && (
+                  <Alert status='error' className='alert-msg'>
+                    <AlertIcon />
+                    <AlertDescription>{errorPassword}</AlertDescription>
+                  </Alert>
+                )}
               </FormControl>
               <Stack spacing={10}>
                 <FormControl spacing={5}>
@@ -166,6 +228,12 @@ const SignUp = (props) => {
                       coding
                     </Checkbox>
                   </Stack>
+                  {errorInterests && (
+                    <Alert status='error' className='alert-msg'>
+                      <AlertIcon />
+                      <AlertDescription>{errorInterests}</AlertDescription>
+                    </Alert>
+                  )}
                 </FormControl>
                 <FormControl id="userBio">
                   <Stack spacing={3}>
@@ -178,6 +246,12 @@ const SignUp = (props) => {
                       placeholder="I love bees because they are such hard workers!!"
                       onChange={handleChange}
                     />
+                    {errorBioInput && (
+                      <Alert status='error' className='alert-msg'>
+                        <AlertIcon />
+                        <AlertDescription>{errorBioInput}</AlertDescription>
+                      </Alert>
+                    )}
                   </Stack>
                 </FormControl>
                 <Stack
@@ -210,4 +284,4 @@ const SignUp = (props) => {
   );
 };
 
-export default SignUp;
+export default SignupForm;

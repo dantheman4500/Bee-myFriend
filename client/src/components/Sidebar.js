@@ -12,7 +12,7 @@ import {
     Text,
     Link
 } from '@chakra-ui/react';
-import auth from '../utils/auth';
+import Auth from '../utils/auth';
 const styles = {
     display: "flex-box",
     // float: "left",
@@ -61,7 +61,7 @@ function SideBar() {
         </>
     )
     } else return (
-        <h2>Log In First</h2>
+        <p></p>
     )
 }
 

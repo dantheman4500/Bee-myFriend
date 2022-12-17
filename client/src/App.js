@@ -26,21 +26,22 @@ import SingleFriend from './pages/SingleFriend';
 import Donate from './pages/Donate';
 import Success from './pages/Success';
 import SearchBar from './components/SearchBar';
-import SignUp from './pages/SignUp';
+import SignupForm from './pages/SignupForm';
 import ProfileUpdate from './pages/ProfileUpdate';
 // import UserProfile from './components/UserProfile';
 import SideBar from './components/Sidebar';
 import Home from './pages/Home';
+import Logout from './components/Logout'
 
 const httpLink = createHttpLink({
   uri: '/graphql'
 });
 
-const authLink = setContext((_, { headers }) => {
+const authLink = setContext((_, { logout }) => {
   const token = localStorage.getItem('id_token');
   return {
-    headers: {
-      ...headers,
+    logout: {
+      ...logout,
       authorization: token ? `Bearer ${token}` : '',
     },
   };
@@ -61,51 +62,52 @@ function App() {
         <Router>
           <Box textAlign="center" fontSize="xl">
             <Grid minH="100vh" p={0}>
+            <Grid minH="10vh" p={3}>
               <ColorModeSwitcher justifySelf="flex-end" />
               <VStack spacing={8}>
-                  <div className="flex-column justify-flex-start min-100-vh">
-                    <div className="container">
-                      <Routes>
-{/* This first route denotes the loading/landing page, the first page a user sees */}
-                        <Route 
-                          path="/" 
-                          element={<Home/>} 
-                        />
-                        <Route 
-                          path="/login" 
-                          element={<Login/>} 
-                        />
-                        <Route 
-                          path="/profile" 
-                          element={<Profile/>} 
-                        />
-                        <Route 
-                          path="/profileupdate" 
-                          element={<ProfileUpdate/>} 
-                        />
-                        <Route 
-                          path="/friends" 
-                          element={<SearchBar/>} 
-                        />
-                        <Route 
-                          path="/friends/:profileId" 
-                          element={<SingleFriend/>} 
-                        />
-                        <Route
-                        path='/donate'
-                        element={<Donate/>}
-                        />
-                        <Route
-                        path='/success'
-                        element={<Success/>}
-                        />                   
-                        <Route 
-                          path="signup" 
-                          element={<SignUp/>} 
-                        />                       
-                      </Routes>
-                    </div>
-                  </div>
+                <Routes>
+                  {/* This first route denotes the loading/landing page, the first page a user sees */}
+                  <Route
+                    path="/"
+                    element={<Home />}
+                  />
+                  <Route
+                    path="/login"
+                    element={<Login />}
+                  />
+                  <Route
+                    path="/profile"
+                    element={<Profile />}
+                  />
+                  <Route
+                    path="/profileupdate"
+                    element={<ProfileUpdate />}
+                  />
+                  <Route
+                    path="/friends"
+                    element={<SearchBar />}
+                  />
+                  <Route
+                    path="/friends/:profileId"
+                    element={<SingleFriend />}
+                  />
+                  <Route
+                    path='/donate'
+                    element={<Donate />}
+                  />
+                  <Route
+                    path='/success'
+                    element={<Success />}
+                  />
+                  <Route
+                    path="/signup"
+                    element={<SignupForm />}
+                  />
+                  <Route
+                    path='/logout'
+                    element={<Logout />}
+                  />
+                </Routes>
               </VStack>
             </Grid>
           </Box>

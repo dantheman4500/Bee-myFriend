@@ -40,6 +40,7 @@ const typeDefs = gql`
     createProfile(firstName: String!, lastName: String!, email: String!, password: String!, userBio: String!, interests: [String]!): Auth
     deleteProfile(profileId: ID!): Profile
     addInterest(profileId: ID!, interest: String!): Profile
+    deleteInterest(profileId: ID!, interest: String!): Profile
     updateUserBio(profileId: ID!, userBio: String!): Profile
   }
 `;

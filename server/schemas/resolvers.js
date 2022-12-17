@@ -85,35 +85,31 @@ const resolvers = {
       return { token, profile };
     },
     deleteProfile: async (parent, { profileId }, context) => {
-      // uncomment below to ensure that only logged in users can delete their profiles
-      // works on backend
-      // if (context.profile) {
-        // return Profile.findOneAndDelete({ _id: context.profile._id});
-        return Profile.findOneAndDelete({ _id: profileId});
-      // }
-      // throw new AuthenticationError("Please login first!");
+      return Profile.findOneAndDelete({ _id: profileId });
     },
-    addInterest: async (parent, { profileId, interest}, context) => {
-      // uncomment below to ensure that only logged in users can add interests
-      // works on backend
-      // if (context.profile) {
-        return Profile.findOneAndUpdate(
-          { _id: profileId},
-          { $addToSet: { interests: interest }},
-          { new: true, runValidators: true}
-        );
-      // }
-      // throw new AuthenticationError("Please login first!");
+    addInterest: async (parent, { profileId, interest }, context) => {
+      return Profile.findOneAndUpdate(
+        { _id: profileId },
+        { $addToSet: { interests: interest } },
+        { new: true, runValidators: true }
+      );
     },
-    updateUserBio: async (parent, {profileId, userBio}, context) => {
+    deleteInterest: async (parent, { profileId, interest}, context) => {
+      return Profile.findOneAndUpdate(
+        { _id: profileId},
+        { $pull: {interests: interest}},
+        { new: true }
+      );
+    },
+    updateUserBio: async (parent, { profileId, userBio }, context) => {
       // works on backend
       // if (context.profile) {
-        // return await Profile.findByIdAndUpdate(context.profile._id, args, { new: true})
-        return await Profile.findByIdAndUpdate(
-          {_id: profileId},
-          {userBio: userBio} ,
-          { new: true}
-          )
+      // return await Profile.findByIdAndUpdate(context.profile._id, args, { new: true})
+      return await Profile.findByIdAndUpdate(
+        { _id: profileId },
+        { userBio: userBio },
+        { new: true }
+      )
       // }
       // throw new AuthenticationError("Please login first!");
     }

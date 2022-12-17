@@ -53,12 +53,28 @@ export const ADD_ORDER = gql`
   }
 `
 
-export const ADD_SKILL = gql`
-  mutation addSkill($profileId: ID!, $skill: String!) {
-    addSkill(profileId: $profileId, skill: $skill) {
+export const ADD_INTEREST = gql`
+  mutation addInterest($profileId: ID!, $interest: String!) {
+    addInterest(profileId: $profileId, interest: $interest) {
       _id
-      name
-      skills
+      interests
+    }
+  }
+`;
+export const DELETE_INTEREST = gql`
+  mutation deleteInterest($profileId: ID!, $interest: String!) {
+    deleteInterest(profileId: $profileId, interest: $interest) {
+      _id
+      interests
+    }
+  }
+`;
+
+export const UPDATE_BIO = gql`
+  mutation updateUserBio($profileId: ID!, $userBio: String!) {
+    updateUserBio(profileId: $profileId, userBio: $userBio) {
+      _id
+      userBio
     }
   }
 `;
@@ -84,3 +100,17 @@ export const UPDATE_USER = gql`
   }
 `;
 
+export const DELETE_PROFILE = gql`
+mutation deleteProfile(
+  $profileId: ID!
+) {
+  deleteProfile(
+    profileId: $profileId
+  ) {
+    email
+    _id
+    firstName
+    lastName
+  }
+}
+`
