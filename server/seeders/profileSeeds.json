@@ -159,6 +159,130 @@
       "infleuncing",
       "influencer"
     ]
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Miller",
+    "email": "bernie.spin@hotmail.com",
+    "userBio": "After years of hearing it, for once I would like to be the one saying, “Now get the hell out of my office!”",
+    "password": "password201",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "rock",
+      "mineral",
+      "mineral collecting",
+      "geo",
+      "pokemon",
+      "Gymnastics",
+      "South park"
+    ]
+  },
+  {
+    "firstName": "Keith",
+    "lastName": "J Cross",
+    "email": "bradly2017@hotmail.com",
+    "userBio": "Hiding in the restroom at work, just to post this (;",
+    "password": "password52",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coding",
+      "food",
+      "teaching",
+      "movie",
+      "movie watching",
+      "netflix",
+      "chill",
+      "astronomy",
+      "physics"
+    ]
+  },
+  {
+    "firstName": "Eduardo",
+    "lastName": "N Titus",
+    "email": "verner1973@gmail.com",
+    "userBio": "Anyone know how to get blood stains out of carpet? Totally unrelated, but I also am looking for a new girlfriend.",
+    "password": "password52",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "web",
+      "web surfing",
+      "web junkie",
+      "travel",
+      "sculpting",
+      "hulu",
+      "hang out",
+      "Genealogy",
+      "chemistry",
+      "CSI",
+      "supernatural",
+      "anime"
+    ]
+  },
+  {
+    "firstName": "Erlinda",
+    "lastName": "Madden",
+    "email": "hope1974@hotmail.com",
+    "userBio": "Dear Websites that automatically play loud videos, thanks for trying to get me fired!",
+    "password": "passwordnotgood",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coffee",
+      "internet",
+      "troll",
+      "lord of the rings",
+      "birdwatching",
+      "amazon",
+      "hikes",
+      "wrestling",
+      "language",
+      "Cops",
+      "Avatar: The Last Air Bender",
+      "PC"
+    ]
+  },
+  {
+    "firstName": "Ramon",
+    "lastName": "A Joe",
+    "email": "selena1996@yahoo.com",
+    "userBio": "I very much wished not to be noticed",
+    "password": "passwordnotgood",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "space",
+      "minecraft",
+      "boxing",
+      "UFC",
+      "cats",
+      "cat",
+      "Sonic",
+      "wrestling",
+      "language",
+      "Cops",
+      "The Hobbit",
+      "Marine"
+    ]
+  },
+  {
+    "firstName": "Diane",
+    "lastName": "M Valle",
+    "email": "ambrose2009@hotmail.com",
+    "userBio": "thinks that thinking about the thoughts of thinking are too thinkable for thoughts to be thought about thinking, I think",
+    "password": "passwordnotgood",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "Philosophy",
+      "pottery",
+      "organizer",
+      "Pintrest",
+      "Doordash",
+      "food",
+      "Snakes",
+      "Fight Club",
+      "The Flash",
+      "Knitting",
+      "Sewing",
+      "Army"
+    ]
   }
 
 ]
