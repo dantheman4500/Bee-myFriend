@@ -18,17 +18,16 @@ import {
 } from '@chakra-ui/react';
 
 import { ColorModeSwitcher } from './ColorModeSwitcher';
+// importing the different components and pages for the app
 import Banner from './components/Banner';
 import Profile from './pages/Profile';
 import Login from "./pages/Login"
-// import Friends from './pages/Friends';
 import SingleFriend from './pages/SingleFriend';
 import Donate from './pages/Donate';
 import Success from './pages/Success';
 import SearchBar from './components/SearchBar';
 import SignupForm from './pages/SignupForm';
 import ProfileUpdate from './pages/ProfileUpdate';
-// import UserProfile from './components/UserProfile';
 import SideBar from './components/Sidebar';
 import Home from './pages/Home';
 import Logout from './components/Logout'

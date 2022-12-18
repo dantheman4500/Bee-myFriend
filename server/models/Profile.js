@@ -1,5 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+// the below function is not being implemented currently
+const stringHelper = require('../utils/helpers');
 
 const profileSchema = new Schema({
   firstName: {
@@ -40,7 +42,7 @@ const profileSchema = new Schema({
   ]
 });
 
-//* set up pre-save middleware to create password
+// user passwords are stored as hashed values in the database
 profileSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
@@ -50,7 +52,6 @@ profileSchema.pre('save', async function (next) {
   next();
 });
 
-//* compare the incoming password with the hashed password
 profileSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };

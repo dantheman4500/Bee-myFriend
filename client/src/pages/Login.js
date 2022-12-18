@@ -12,7 +12,6 @@ import {
   Heading,
 } from '@chakra-ui/react'
 
-
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -26,7 +25,6 @@ const Login = (props) => {
       [name]: value,
     });
   };
-
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -40,7 +38,6 @@ const Login = (props) => {
     } catch (e) {
       console.error(e);
     }
-
     // clear form values
     setFormState({
       email: '',

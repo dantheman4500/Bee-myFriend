@@ -1,5 +1,4 @@
 import React from 'react';
-// import SideBar from '../components/Sidebar';
 import auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE } from '../utils/queries';
@@ -56,9 +55,6 @@ function Profile() {
                 Welcome, {profile.firstName} {profile.lastName}!
               </Text>
               <br />{' '}
-              {/* <Text color={'orange.400'} as={'span'}>
-                Bio
-              </Text>{' '} */}
             </Heading>
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
               {profile.userBio}
@@ -81,7 +77,6 @@ function Profile() {
                 >{interest}</Text>)}
               </Box>
             </Stack>
-            {/* <Link href='/ProfileUpdate'><Button rounded={'full'}>Edit your interests</Button></Link> */}
           </Stack>
         </Flex>
         <Flex flex={1}>

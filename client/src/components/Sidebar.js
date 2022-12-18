@@ -13,6 +13,8 @@ import {
     Link
 } from '@chakra-ui/react';
 import Auth from '../utils/auth';
+
+//custom css styling
 const styles = {
     display: "flex-box",
     float: "left",
@@ -20,6 +22,7 @@ const styles = {
     margin: "1%"
 }
 
+// function to display menu button for the side bar drawer
 function SideBar() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()

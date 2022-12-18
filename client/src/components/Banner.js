@@ -1,5 +1,4 @@
 import React from 'react';
-
 // imported from chakra UI
 import { Box, Image, Text, Center, Link } from '@chakra-ui/react'
 

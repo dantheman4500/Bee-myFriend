@@ -84,9 +84,7 @@ const TestimonialAvatar = ({
     </Flex>
   );
 };
-
 // End of Testimonial Constants
-
 
 function Home() {
   return (
@@ -118,9 +116,9 @@ function Home() {
             />
           </Flex>
           <Text color={'gray.500'}>
-          Bee My Friend is your social media application for finding friends with shared interests without all the noise.   
-          Be real. Bee yourself. Bee my friend.
-            
+            Bee My Friend is your social media application for finding friends with shared interests without all the noise.
+            Be real. Bee yourself. Bee my friend.
+
           </Text>
           <Stack
             direction={'column'}
@@ -128,7 +126,7 @@ function Home() {
             align={'center'}
             alignSelf={'center'}
             position={'relative'}>
-            <Link href='/login' _hover={{textDecoration: "none"}}>
+            <Link href='/login' _hover={{ textDecoration: "none" }}>
               <Button
                 colorScheme={'green'}
                 size="lg"
@@ -140,7 +138,7 @@ function Home() {
                   bg: 'gray.500',
                   textDecoration: "none"
                 }}>
-             <Text fontSize='4xl' textAlign={"center"}>Login</Text> 
+                <Text fontSize='4xl' textAlign={"center"}>Login</Text>
               </Button>
             </Link>
             <Button variant={'link'} colorScheme={'blue'} size={'med'} >
@@ -149,71 +147,71 @@ function Home() {
               </Link>
             </Button>
 
-      {/* Playing around with testimonial cards */}
-      <br></br><br></br>
-      <Box  bg={useColorModeValue('gray.100', 'gray.600')}>
-      <Container maxW={'4xl'} py={15} as={Stack} spacing={12}>
-        <Stack spacing={0} align={'center'}>
-          <Heading color='orange.400'>Success Stories</Heading>
-          <Text>Check out what our users have to say!</Text>
-        </Stack>
-        <Stack
-          direction={{ base: 'column', md: 'row' }}
-          spacing={{ base: 10, md: 4, lg: 10 }}>
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Shared Interests</TestimonialHeading>
-              <TestimonialText>
-                Bee My Friend matched me with Craig. 
-                The interest feature made it simple to find people who enjoy the same things I do.
-                We clicked right away and now we go to Big Bear every winter! 
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                'https://images.unsplash.com/photo-1522542194-2c2e6ffcf7d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80'
-              }
-              name={'Simon'}
-              title={'Support Staff at Tittle'}
-            />
-          </Testimonial>
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Distance Means Nothing!
-              </TestimonialHeading>
-              <TestimonialText>
-                Working remotely can be lonely. Bee My Friend's messaging function gives me a chance to reconnect with other game lovers like me. 
-                We're planning our first meet up together soon! 
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                'https://images.unsplash.com/photo-1568431477192-52bb13a55088?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
-              }
-              name={'Sonic The Hedgehog'}
-              title={'Blogger at Game Rewiew'}
-            />
-          </Testimonial>
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Bridging Worlds
-              </TestimonialHeading>
-              <TestimonialText>
-                Bee My Friend connected me with the real world. I felt really misunderstood by my peers and Bee My Friend allowed me to expand my social circle and meet new people.
-                Maybe I even found love? Thanks Bee My Friend! 
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                'https://m.media-amazon.com/images/I/41kaqF8uVfL._AC_SY580_.jpg'
-              }
-              name={'Barry B Benson'}
-              title={'A Literal Bee'}
-            />
-          </Testimonial>
-        </Stack>
-      </Container>
-    </Box>
+            {/* Playing around with testimonial cards */}
+            <br></br><br></br>
+            <Box bg={useColorModeValue('gray.100', 'gray.600')}>
+              <Container maxW={'4xl'} py={15} as={Stack} spacing={12}>
+                <Stack spacing={0} align={'center'}>
+                  <Heading color='orange.400'>Success Stories</Heading>
+                  <Text>Check out what our users have to say!</Text>
+                </Stack>
+                <Stack
+                  direction={{ base: 'column', md: 'row' }}
+                  spacing={{ base: 10, md: 4, lg: 10 }}>
+                  <Testimonial>
+                    <TestimonialContent>
+                      <TestimonialHeading>Shared Interests</TestimonialHeading>
+                      <TestimonialText>
+                        Bee My Friend matched me with Craig.
+                        The interest feature made it simple to find people who enjoy the same things I do.
+                        We clicked right away and now we go to Big Bear every winter!
+                      </TestimonialText>
+                    </TestimonialContent>
+                    <TestimonialAvatar
+                      src={
+                        'https://images.unsplash.com/photo-1522542194-2c2e6ffcf7d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80'
+                      }
+                      name={'Simon'}
+                      title={'Support Staff at Tittle'}
+                    />
+                  </Testimonial>
+                  <Testimonial>
+                    <TestimonialContent>
+                      <TestimonialHeading>Distance Means Nothing!
+                      </TestimonialHeading>
+                      <TestimonialText>
+                        Working remotely can be lonely. Bee My Friend's messaging function gives me a chance to reconnect with other game lovers like me.
+                        We're planning our first meet up together soon!
+                      </TestimonialText>
+                    </TestimonialContent>
+                    <TestimonialAvatar
+                      src={
+                        'https://images.unsplash.com/photo-1568431477192-52bb13a55088?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+                      }
+                      name={'Sonic The Hedgehog'}
+                      title={'Blogger at Game Rewiew'}
+                    />
+                  </Testimonial>
+                  <Testimonial>
+                    <TestimonialContent>
+                      <TestimonialHeading>Bridging Worlds
+                      </TestimonialHeading>
+                      <TestimonialText>
+                        Bee My Friend connected me with the real world. I felt really misunderstood by my peers and Bee My Friend allowed me to expand my social circle and meet new people.
+                        Maybe I even found love? Thanks Bee My Friend!
+                      </TestimonialText>
+                    </TestimonialContent>
+                    <TestimonialAvatar
+                      src={
+                        'https://m.media-amazon.com/images/I/41kaqF8uVfL._AC_SY580_.jpg'
+                      }
+                      name={'Barry B Benson'}
+                      title={'A Literal Bee'}
+                    />
+                  </Testimonial>
+                </Stack>
+              </Container>
+            </Box>
           </Stack>
         </Stack>
       </Container>

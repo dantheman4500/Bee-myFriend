@@ -3,6 +3,7 @@ const { Profile } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc')
 
+// queries and mutations that allow for the app to interact with the data in the database
 const resolvers = {
   Query: {
     profiles: async () => {
@@ -12,7 +13,6 @@ const resolvers = {
     profile: async (parent, { profileId }) => {
       return Profile.findOne({ _id: profileId });
     },
-    //* By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
       if (context.user) {
         return Profile.findOne({ _id: context.user._id });
@@ -23,15 +23,10 @@ const resolvers = {
       return Profile.find({ interests: profileInterest });
     },
     checkout: async (parent, args, context) => {
-      // const url = new URL("https://google.com");
-      console.log(context.headers.referer);
+
       const url = new URL(context.headers.referer).origin;
       const line_items = [];
       const products = [...args.products];
-
-      console.log(products);
-      // have an array of products
-      // array has name, description, id, and price
 
       for (let i = 0; i < products.length; i++) {
         const product = await stripe.products.create({
@@ -102,16 +97,11 @@ const resolvers = {
       );
     },
     updateUserBio: async (parent, { profileId, userBio }, context) => {
-      // works on backend
-      // if (context.profile) {
-      // return await Profile.findByIdAndUpdate(context.profile._id, args, { new: true})
       return await Profile.findByIdAndUpdate(
         { _id: profileId },
         { userBio: userBio },
         { new: true }
       )
-      // }
-      // throw new AuthenticationError("Please login first!");
     }
   }
 }

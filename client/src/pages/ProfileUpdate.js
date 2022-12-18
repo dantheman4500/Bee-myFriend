@@ -65,6 +65,7 @@ const UpdateProfile = (props) => {
           interest
         }
       });
+      console.log(interest)
       setInterest('');
     } catch (err) {
       console.error(err)
@@ -88,9 +89,7 @@ const UpdateProfile = (props) => {
       console.error(err)
     }
   }
-
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <>
       <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
@@ -117,7 +116,7 @@ const UpdateProfile = (props) => {
           placeholder="i.e. Hiking"
           name="interest"
           type="interest"
-          value={interest}
+          value={interest.toLowerCase()}
           width="30%"
           onChange={(e) => setInterest(e.target.value)}
         />
@@ -125,7 +124,7 @@ const UpdateProfile = (props) => {
       </FormControl>
       <FormControl>
         <Center>
-        <FormLabel>Update your bio?</FormLabel>
+          <FormLabel>Update your bio?</FormLabel>
         </Center>
         <Textarea
           name="userBio"

@@ -2,6 +2,7 @@ const db = require('../config/connection');
 const { Profile } = require('../models');
 const profileSeeds = require('./profileSeeds.json');
 
+// seed the database using the data from the JSON file
 db.once('open', async () => {
   try {
     await Profile.deleteMany({});
@@ -13,4 +14,3 @@ db.once('open', async () => {
     throw err;
   }
 });
-

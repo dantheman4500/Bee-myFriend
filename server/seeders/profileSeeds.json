@@ -118,8 +118,8 @@
     "password": "passwordisstrong",
     "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
     "interests": [
-      "Monty Python and the holy grail",
-      "Money",
+      "monty python and the holy grail",
+      "money",
       "food",
       "cycling"
     ]
@@ -173,8 +173,8 @@
       "mineral collecting",
       "geo",
       "pokemon",
-      "Gymnastics",
-      "South park"
+      "gymnastics",
+      "watching tv"
     ]
   },
   {
@@ -213,7 +213,7 @@
       "hang out",
       "Genealogy",
       "chemistry",
-      "CSI",
+      "csi",
       "supernatural",
       "anime"
     ]
@@ -235,9 +235,8 @@
       "hikes",
       "wrestling",
       "language",
-      "Cops",
-      "Avatar: The Last Air Bender",
-      "PC"
+      "cops",
+      "computers"
     ]
   },
   {
@@ -251,15 +250,15 @@
       "space",
       "minecraft",
       "boxing",
-      "UFC",
+      "ufc",
       "cats",
       "cat",
       "Sonic",
       "wrestling",
       "language",
       "Cops",
-      "The Hobbit",
-      "Marine"
+      "the Hobbit",
+      "marine"
     ]
   },
   {
@@ -270,19 +269,14 @@
     "password": "passwordnotgood",
     "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
     "interests": [
-      "Philosophy",
+      "philosophy",
       "pottery",
       "organizer",
-      "Pintrest",
-      "Doordash",
+      "browsing pinterest",
       "food",
-      "Snakes",
-      "Fight Club",
-      "The Flash",
-      "Knitting",
-      "Sewing",
-      "Army"
+      "knitting",
+      "sewing",
+      "army"
     ]
   }
-
 ]
