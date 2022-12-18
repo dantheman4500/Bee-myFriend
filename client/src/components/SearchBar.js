@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import "./styles.css"
 import {
     Heading,
-    Avatar,
     Box,
     Center,
     Image,
-    Flex,
     Text,
     Stack,
     Button,
@@ -19,13 +17,14 @@ import { useQuery } from '@apollo/client';
 import { QUERY_INTEREST } from '../utils/queries';
 import { FaSearch, FaForumbee } from 'react-icons/fa';
 
+//function to query the inputted interest and return a list of profiles that have that interest
 function SearchBar({ onSearchSubmit }) {
     const [interest, setInterest] = useState('')
     const submitInterest = (e) => {
         e.preventDefault();
         onSearchSubmit(interest);
     };
-
+    console.log(interest)
     const { loading, data } = useQuery(QUERY_INTEREST, {
         variables: { profileInterest: interest }
     })
@@ -73,7 +72,7 @@ function SearchBar({ onSearchSubmit }) {
                                             Their interest(s) include:
                                         </Heading>
                                         {profile.interests && profile.interests.map((interest) => (
-                                            <Text fontWeight={600}>{interest}</Text>
+                                            <Text fontWeight={600} textTransform={"capitalize"}>{interest}</Text>
                                         ))}
                                         <Link
                                             to={`/friends/${profile._id}`}
@@ -97,7 +96,7 @@ function SearchBar({ onSearchSubmit }) {
                         </HStack>
                     ))}
             </form>
-            <FaForumbee className='bee-icon'/><Text>Bee My Friend</Text>
+            <FaForumbee className='bee-icon' /><Text>Bee My Friend</Text>
         </div>
     )
 }

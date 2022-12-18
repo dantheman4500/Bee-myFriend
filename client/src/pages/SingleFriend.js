@@ -1,3 +1,4 @@
+// import statements needed for app
 import React from 'react';
 import {
     Heading,
@@ -13,9 +14,8 @@ import {
 } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-// import FriendList from '../components/FriendList';
 import { QUERY_SINGLE_PROFILE } from '../utils/queries';
-
+// setting up a css style object for some custom styling
 const styles = {
     marginRight: "7%",
 }
@@ -52,7 +52,7 @@ const SingleFriend = () => {
                 <Heading fontSize={'2xl'} fontFamily={'body'}>
                     {profile.firstName} {profile.lastName}
                 </Heading>
-                <Divider height={'50px'} borderColor='orange.300'/>
+                <Divider height={'50px'} borderColor='orange.300' />
                 <Text
                     textAlign={'center'}
                     color={'white.400'}
@@ -68,7 +68,7 @@ const SingleFriend = () => {
                             bg={'white.800'}
                             fontWeight={'400'}
                             fontSize={'xl'}
-                            >
+                        >
                             {interest}
                         </Badge>
                     ))}
@@ -102,17 +102,8 @@ const SingleFriend = () => {
                 </Stack>
             </Box>
         </Center>
-
-
-
     );
 };
 
 export default SingleFriend;
 
-{/* <div>
-<h2 className="card-header">
-    
-    {profile.image}
-</h2>
-</div> */}

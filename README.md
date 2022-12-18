@@ -80,7 +80,7 @@ Stripe for donation features.
 
 You can find our application deployed here:
 
-`https://beemyfriend.herokuapp.com/`
+[Link to APP](https://beemyfriend.herokuapp.com/)
 
 ## Application Images:
 ### Early Development

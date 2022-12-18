@@ -8,7 +8,7 @@ import React, { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
-
+// setting up the donation page
 const Donate = () => {
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
@@ -23,7 +23,7 @@ const Donate = () => {
     }
   }, [data]);
   function submitCheckout(amount) {
-    // pass the right products as variables to getCheckout
+
     const products = [];
     const product = {
       name: `${amount} dollars`,

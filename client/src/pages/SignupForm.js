@@ -1,4 +1,4 @@
-// Import React, hooks, mutations, etc. for signUp page. 
+// Imports needed for signup form 
 import React, { useState } from 'react';
 import { validateEmail, checkInput, checkInterest } from '../utils/helpers';
 import { useMutation } from '@apollo/client';
@@ -23,7 +23,7 @@ import {
   AlertDescription
 } from '@chakra-ui/react';
 
-// Signup props and logic for sign-up
+// props and logic for sign-up
 const SignupForm = (props) => {
   const [errorFirstName, setErrorFirstName] = useState('');
   const [errorLastName, setErrorLastName] = useState('');
