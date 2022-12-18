@@ -37,8 +37,13 @@ const profileSchema = new Schema({
       required: false,
       default: "coding"
     }
-  ]
+  ],
+  friends: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Profile',
+  }],
 });
+
 
 //* set up pre-save middleware to create password
 profileSchema.pre('save', async function (next) {

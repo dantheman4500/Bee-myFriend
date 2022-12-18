@@ -10,6 +10,8 @@ const typeDefs = gql`
     image: String
     userBio: String
     interests: [String]
+    friends: [Profile]
+
   }
 
   type Auth {
@@ -35,6 +37,20 @@ const typeDefs = gql`
     price: Int
   }
 
+  
+  type Friendship {
+    id: ID!
+    sender: (profileId: ID!): Profile
+    recipient: (profileId: ID!): Profile
+    status: FriendshipStatus!
+  }
+  
+  enum FriendshipStatus {
+    PENDING
+    ACCEPTED
+    DECLINED
+  }
+
   type Mutation {
     login(email: String!, password: String!): Auth
     createProfile(firstName: String!, lastName: String!, email: String!, password: String!, userBio: String!, interests: [String]!): Auth
@@ -42,6 +58,9 @@ const typeDefs = gql`
     addInterest(profileId: ID!, interest: String!): Profile
     deleteInterest(profileId: ID!, interest: String!): Profile
     updateUserBio(profileId: ID!, userBio: String!): Profile
+    createFriendship(user1Id: ID!, user2Id: ID!): Friendship
+    updateFriendshipStatus(id: ID!, status: FriendshipStatus!): Friendship
+    deleteFriendship(id: ID!): Friendship
   }
 `;
 

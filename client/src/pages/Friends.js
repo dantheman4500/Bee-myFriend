@@ -1,29 +1,36 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
-import FriendList from '../components/FriendList';
-import { QUERY_PROFILES } from '../utils/queries';
+import { useQuery, useMutation} from '@apollo/client';
+import { GET_FRIENDS } from '../utils/queries';
+import { CREATE_FRIENDSHIP,DELETE_FRIENDSHIP } from '../utils/mutations';
 
-const Friends = () => {
-  const { loading, data } = useQuery(QUERY_PROFILES);
-  console.log(data)
-  const profiles = data?.profiles || [];
+
+
+function Friends(props) {
+  const { profileId } = props;
+  const { loading, error, data } = useQuery(GET_FRIENDS, {
+    variables: { profileId },
+  });
+  const [createFriendship] = useMutation(CREATE_FRIENDSHIP);
+  const [deleteFriendship] = useMutation(DELETE_FRIENDSHIP);
+
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
 
   return (
     <main>
-      <div className="flex-row justify-center">
-        <div className="col-12 col-md-10 my-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <FriendList
-              profiles={profiles}
-              title="Meet New Friends!"
-            />
-          )}
+      <h2 className="flex-row justify-center">Friends</h2>
+      {data.profiles.friends.map(friend => (
+        <div key={friend.id}>
+          <p>{friend.firstName}</p>
+          <button onClick={() => deleteFriendship({ variables: { id: friend.id } })}>
+            Delete Friendship
+          </button>
         </div>
-      </div>
+      ))}
+      <button onClick={() => createFriendship({ variables: { user1Id: profileId, user2Id: 'someOtherUserId' } })}>
+        Add Friend
+      </button>
     </main>
   );
-};
-
+}
 export default Friends;

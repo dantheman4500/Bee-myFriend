@@ -21,12 +21,12 @@ import { ColorModeSwitcher } from './ColorModeSwitcher';
 import Banner from './components/Banner';
 import Profile from './pages/Profile';
 import Login from "./pages/Login"
-// import Friends from './pages/Friends';
+import Friends from './pages/Friends';
 import SingleFriend from './pages/SingleFriend';
 import Donate from './pages/Donate';
 import Success from './pages/Success';
 import SearchBar from './components/SearchBar';
-import SignUp from './pages/SignUp';
+import SignUp from './pages/signUp';
 import ProfileUpdate from './pages/ProfileUpdate';
 // import UserProfile from './components/UserProfile';
 import SideBar from './components/Sidebar';
@@ -84,7 +84,7 @@ function App() {
                   />
                   <Route
                     path="/friends"
-                    element={<SearchBar />}
+                    element={<Friends />}
                   />
                   <Route
                     path="/friends/:profileId"

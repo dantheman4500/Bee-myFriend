@@ -53,3 +53,14 @@ export const QUERY_INTEREST = gql`
     }
   }
 `;
+
+export const GET_FRIENDS = gql`
+  query GetFriends($profileId: ID!) {
+    Profile(profileId: $profileId) {
+      friends {
+        _id
+        firstName
+      }
+    }
+  }
+`;

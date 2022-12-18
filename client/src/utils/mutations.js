@@ -114,3 +114,28 @@ mutation deleteProfile(
   }
 }
 `
+
+export const CREATE_FRIENDSHIP = gql`
+  mutation CreateFriendship($user1Id: ID!, $user2Id: ID!) {
+    createFriendship(user1Id: $user1Id, user2Id: $user2Id) {
+      id
+      user1 {
+        id
+        firstName
+      }
+      user2 {
+        id
+        firstName
+      }
+      status
+    }
+  }
+`;
+
+export const DELETE_FRIENDSHIP = gql`
+  mutation DeleteFriendship($id: ID!) {
+    deleteFriendship(id: $id) {
+      id
+    }
+  }
+`;

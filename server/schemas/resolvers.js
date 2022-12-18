@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
+const { Profile,Friendship} = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc')
 
@@ -22,6 +22,17 @@ const resolvers = {
     findProfileByInterest: async (parent, { profileInterest }) => {
       return Profile.find({ interests: profileInterest });
     },
+
+    friendships: async () => {
+      const friendships = await Friendship.find();
+      return friendships;
+    },
+
+    friendship: async (_, { id }) => {
+      const friendship = await Friendship.findById(id);
+      return friendship;
+    },
+    
     checkout: async (parent, args, context) => {
       // const url = new URL("https://google.com");
       console.log(context.headers.referer);
@@ -60,7 +71,10 @@ const resolvers = {
       });
 
       return { session: session.id };
+      
     }
+
+    
   },
   Mutation: {
     login: async (parent, { email, password }) => {
@@ -101,6 +115,31 @@ const resolvers = {
         { new: true }
       );
     },
+    //! Friendship mutastions 
+      //* Create a new friendship object
+      createFriendship: async (_, { user1Id, user2Id }) => {
+        const friendship = new Friendship({
+          user1: user1Id,
+          user2: user2Id,
+          status: 'PENDING',
+        });
+        await friendship.save();
+        return friendship;
+      },
+      //* Save the friendship to the database
+      updateFriendshipStatus: async (_, { id, status }) => {
+        const friendship = await Friendship.findById(id);
+        friendship.status = status;
+        await friendship.save();
+        return friendship;
+      },
+      //* Delete the friendship in the data base
+      deleteFriendship: async (_, { id }) => {
+        const friendship = await Friendship.findById(id);
+        await friendship.remove();
+        return friendship;
+      },
+  
     updateUserBio: async (parent, { profileId, userBio }, context) => {
       // works on backend
       // if (context.profile) {
