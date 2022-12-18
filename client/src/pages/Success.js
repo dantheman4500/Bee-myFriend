@@ -36,7 +36,7 @@ function Success() {
         <div>
             <h1>Success!</h1>
             <h2>Thank You for your donation!</h2>
-            <h2>You will be redirected to the home page</h2>
+            <h2>You will be redirected to your profile page</h2>
         </div>
     )
 }

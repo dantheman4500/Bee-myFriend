@@ -81,7 +81,7 @@ function Profile() {
         </Flex>
         <Flex flex={1}>
           <Image
-            alt={'Login Image'}
+            alt={'image depicting a person jumping in the middle of the road'}
             objectFit={'cover'}
             borderRadius='full'
             boxSize='550px'
