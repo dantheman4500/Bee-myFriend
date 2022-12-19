@@ -33,6 +33,8 @@ Bee My Friend is a clean, modern social media application that allows users to c
 
 ## User Story:
 
+As a user, I want a social media app that allows me to find users based on similar interests.
+
 ## Coding Requirements: 
 
 ```md
@@ -67,6 +69,11 @@ Prior to starting your application please make sure you have all the proper depe
 If you have cloned the repository, please run the following command in your terminal:
 
 `npm install`
+
+IMPORTANT! For the app to run locally: in the server folder, replace the asterisk `*` with a forward slash `/` in the server.js file on line 26. (Example: `app.get('/'`)
+
+Then seed the database by running `npm run seed`. Start the app by running `npm run develop`.
+
 
 ## Technologies, Libraries, UI Used:
 
