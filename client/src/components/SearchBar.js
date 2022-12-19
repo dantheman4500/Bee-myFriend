@@ -30,7 +30,7 @@ function SearchBar({ onSearchSubmit }) {
     })
     const profiles = data?.findProfileByInterest || [];
     return (
-        <div>
+        <div className='search-div'>
             <Box>
                 <Text className='search-text'><FaSearch className='search-icon' />Start by typing an interest </Text>
             </Box>

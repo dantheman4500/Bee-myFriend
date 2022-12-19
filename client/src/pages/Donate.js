@@ -40,9 +40,9 @@ const Donate = () => {
 
     <div className='donate-text'>
       <Text fontSize='4xl' className='donate-text'>Your donations will help us improve Bee My Friend</Text>
-      <Image src='https://i.postimg.cc/2S0jQjnH/lina-trochez-kt-PKy-Us3-Qjs-unsplash.jpg' borderRadius='full'></Image>
+      <Image src='https://i.postimg.cc/2S0jQjnH/lina-trochez-kt-PKy-Us3-Qjs-unsplash.jpg' borderRadius='full' alt='depiction of two hands offering a flower' className='donate-img'></Image>
       <Link className='backButton' to="/profile"><Button className='btn' backgroundColor='orange.300' >← Back</Button></Link>
-      <Stack spacing={20} direction='row' align='center' size='md'>
+      <Stack spacing={20} direction='row' align='center' size='md' className='donate-img'>
         <Button onClick={() => submitCheckout(5)} className='btn' backgroundColor='orange.300' size='lg'>$5.00</Button>
         <Button onClick={() => submitCheckout(10)} className='btn' backgroundColor='orange.300' size='lg'>$10.00</Button>
         <Button onClick={() => submitCheckout(20)} className='btn' backgroundColor='orange.300' size='lg'>$20.00</Button>

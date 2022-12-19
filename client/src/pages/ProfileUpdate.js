@@ -120,7 +120,7 @@ const UpdateProfile = (props) => {
           width="30%"
           onChange={(e) => setInterest(e.target.value)}
         />
-        <Button onClick={() => handleAddingInterest()} margin="1%">Add</Button>
+        <Button onClick={() => handleAddingInterest()} margin="1%" bg={'orange.300'}>Add</Button>
       </FormControl>
       <FormControl>
         <Center>
@@ -133,7 +133,7 @@ const UpdateProfile = (props) => {
           onChange={(e) => setUserBio(e.target.value)}
           width="70%"
         ></Textarea>
-        <Button onClick={() => handleBioUpdate()} margin="2%">Update</Button>
+        <Button onClick={() => handleBioUpdate()} margin="2%" bg={'orange.300'}>Update</Button>
       </FormControl>
       {/* Delete button modal */}
       <Button bg={"red.400"} size='lg' onClick={onOpen}>
