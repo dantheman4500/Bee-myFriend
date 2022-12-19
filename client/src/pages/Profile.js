@@ -2,7 +2,7 @@ import React from 'react';
 import auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE } from '../utils/queries';
-
+import './styles.css'
 // Import elements from chakra UI
 import {
   Box,
@@ -29,7 +29,7 @@ function Profile() {
   return (
     <div>
       <Center>
-        <Box bg='orange.300' w='100%' p={4} borderRadius='full'>
+        <Box bg='orange.300' w='20%' p={4} borderRadius='full' className='profile-box'>
           Your Profile
         </Box>
       </Center>
@@ -81,7 +81,7 @@ function Profile() {
         </Flex>
         <Flex flex={1}>
           <Image
-            alt={'Login Image'}
+            alt={'image depicting a person jumping in the middle of the road'}
             objectFit={'cover'}
             borderRadius='full'
             boxSize='550px'

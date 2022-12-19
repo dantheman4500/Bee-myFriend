@@ -45,7 +45,7 @@ const SingleFriend = () => {
                 <Avatar
                     size={'xl'}
                     src={profile.image}
-                    alt={'Avatar Alt'}
+                    alt={'bee icon'}
                     mb={4}
                     pos={'relative'}
                 />
@@ -53,14 +53,17 @@ const SingleFriend = () => {
                     {profile.firstName} {profile.lastName}
                 </Heading>
                 <Divider height={'50px'} borderColor='orange.300' />
+                <Text fontSize={'2xl'} fontWeight={'bold'}>Bio</Text>
                 <Text
                     textAlign={'center'}
                     color={'white.400'}
-                    px={3}>
+                    px={3}
+                    fontStyle={'oblique'}>
                     {profile.userBio}
                 </Text>
 
                 <VStack align={'center'} justify={'center'} direction={'row'} mt={6}>
+                    <Text fontWeight={'bold'}>Interests:</Text>
                     {profile.interests.map((interest) => (
                         <Badge
                             px={2}

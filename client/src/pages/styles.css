@@ -5,7 +5,7 @@
     align-items: center;
     position: relative;
     top: 14vh;
-    left: 35%;
+    left: 42%;
     
 }
 
@@ -21,6 +21,7 @@
 .donate-text{
     padding: 2%;
     margin-bottom: 9%;
+    margin-right: 2%;
     align-self: center;
     align-items: center;
 }
@@ -33,4 +34,12 @@
     width: min-content;
     height: min-content;
     text-transform: initial;
+}
+
+.donate-img {
+    margin-left: 8%;
+}
+
+.profile-box {
+    margin-right: 10%;
 }

@@ -1,4 +1,4 @@
-import { Button, Text, Image } from '@chakra-ui/react';
+import { Button, Text, Image, Center } from '@chakra-ui/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -17,27 +17,37 @@ const Logout = () => {
     },
     pic: {
       borderRadius: "2%"
+    },
+    header: {
+      marginRight: "1%"
+    },
+    text: {
+      marginRight: "18%",
+      padding: "3%",
+      marginBottom: '3%'
     }
 
   }
 
   return (
-    <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
-      <Image src='https://i.postimg.cc/prh5P4bR/lute-f-YS-YE16-Yb0-unsplash.jpg' style={styles.pic}/>
-      <Text fontSize='4xl'>
-        Are you sure you want to leave?
-      </Text>
+    <header style={styles.header}>
+      <Image src='https://i.postimg.cc/prh5P4bR/lute-f-YS-YE16-Yb0-unsplash.jpg' style={styles.pic} alt='image depicting a cat watching its owner walk away' />
+      <Center>
+        <Text fontSize='4xl' padding={"3"} style={styles.text} width={'full'}>
+          Are you sure you want to leave?
+        </Text>
+      </Center>
       <div>
         {Auth.loggedIn() ? (
           <>
             <Link to="/profile">
-              <Button bg={'orange.300'}>
+              <Button bg={'orange.300'} style={styles.text}>
                 Take Me Back to My Profile
               </Button>
             </Link>
             <br />
             <Link>
-              <Button bg={'orange.300'} onClick={logout} style={styles.btn}>
+              <Button bg={'orange.300'} onClick={logout} style={styles.text}>
                 I want to Logout
               </Button>
             </Link>
