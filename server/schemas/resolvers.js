@@ -40,6 +40,7 @@ const resolvers = {
           currency: 'usd',
         });
 
+
         line_items.push({
           price: price.id,
           quantity: 1
@@ -53,6 +54,23 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
+
+
+
+        line_items.push({
+          price: price.id,
+          quantity: 1
+        });
+      }
+
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        line_items,
+        mode: 'payment',
+        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${url}/`
+      });
+
 
       return { session: session.id };
     }
@@ -102,6 +120,7 @@ const resolvers = {
         { userBio: userBio },
         { new: true }
       )
+
     },
     updateUser: async (parent, {profileId, firstName, lastName, email, password}, context) => {
       return await Profile.findByIdAndUpdate(
@@ -115,6 +134,9 @@ const resolvers = {
         { new: true }
         )
     },
+
+    }
+
   }
 }
 

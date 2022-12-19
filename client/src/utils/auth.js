@@ -1,5 +1,5 @@
 import decode from 'jwt-decode';
-
+// setting up the decoder on the user token to verify login and/or access the profile
 class AuthService {
   getProfile() {
     return decode(this.getToken());
@@ -30,8 +30,10 @@ class AuthService {
 
   logout() {
     localStorage.removeItem('id_token');
-    window.location.reload();
+    window.location.assign('/');
   }
 }
 
 export default new AuthService();
+
+

@@ -56,6 +56,7 @@ export const ADD_ORDER = gql`
 export const ADD_INTEREST = gql`
   mutation addInterest($profileId: ID!, $interest: String!) {
     addInterest(profileId: $profileId, interest: $interest) {
+
       _id
       interests
     }
@@ -66,6 +67,18 @@ export const DELETE_INTEREST = gql`
     deleteInterest(profileId: $profileId, interest: $interest) {
       _id
       interests
+
+      _id
+      interests
+    }
+  }
+`;
+export const DELETE_INTEREST = gql`
+  mutation deleteInterest($profileId: ID!, $interest: String!) {
+    deleteInterest(profileId: $profileId, interest: $interest) {
+      _id
+      interests
+
     }
   }
 `;
@@ -81,6 +94,7 @@ export const UPDATE_BIO = gql`
 
 export const UPDATE_USER = gql`
   mutation updateUser(
+
     $profileId: ID!,
     $firstName: String!,
     $lastName: String!,
@@ -99,6 +113,23 @@ export const UPDATE_USER = gql`
         lastName
         email
         password
+
+    $firstName: String!
+    $lastName: String!
+    $email: String!
+    $password: String!
+  ) {
+    updateUser(
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      password: $password
+    ) {
+      token
+      user {
+        _id
+      }
+
     }
   }
 `;

@@ -1,0 +1,45 @@
+.backButton {
+    max-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 14vh;
+    left: 42%;
+    
+}
+
+.btn:hover{
+    border:solid orange 2.5px;
+    border-radius: 12%;
+}
+
+.btn{
+    background-color: orange;
+}
+
+.donate-text{
+    padding: 2%;
+    margin-bottom: 9%;
+    margin-right: 2%;
+    align-self: center;
+    align-items: center;
+}
+
+.alert-msg {
+    font-size: medium;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 12px;
+    width: min-content;
+    height: min-content;
+    text-transform: initial;
+}
+
+.donate-img {
+    margin-left: 8%;
+}
+
+.profile-box {
+    margin-right: 10%;
+}

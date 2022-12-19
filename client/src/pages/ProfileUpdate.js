@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE } from '../utils/queries'
+
 import { ADD_INTEREST, DELETE_PROFILE, UPDATE_BIO, UPDATE_USER } from '../utils/mutations';
+
+import { ADD_INTEREST, DELETE_PROFILE, UPDATE_BIO } from '../utils/mutations';
+
 import Auth from '../utils/auth';
 // imported elements from chakra UI
 import {
@@ -43,6 +47,7 @@ const UpdateProfile = (props) => {
     }
     try {
       const mutationResponse = await removeProfile({
+
         variables: {
           profileId: testId.data._id
         }
@@ -85,10 +90,37 @@ const UpdateProfile = (props) => {
       });
       console.log(userBio);
       setUserBio('');
+
+        variables: {
+          profileId: testId.data._id
+        }
+
+      });
+    } catch (err) {
+      console.error(error);
+    }
+    Auth.logout();
+  };
+  const [interest, setInterest] = useState('');
+  const [addInterest, { er }] = useMutation(ADD_INTEREST);
+  // function to handle adding an interest
+  const handleAddingInterest = async (event) => {
+
+    try {
+      const { data } = await addInterest({
+        variables: {
+          profileId: userId.data._id,
+          interest
+        }
+      });
+      console.log(interest)
+      setInterest('');
+
     } catch (err) {
       console.error(err)
     }
   }
+
 
   const [firstName, setfirstName] = useState('');
   const [lastName, setlastName] = useState('');
@@ -111,10 +143,28 @@ const UpdateProfile = (props) => {
       setlastName('');
       setemail('');
       setpassword('');
+
+  const [userBio, setUserBio] = useState('');
+  const [updateBio, { err }] = useMutation(UPDATE_BIO);
+  // Function to update user bio
+  const handleBioUpdate = async (event) => {
+    try {
+      const { data } = await updateBio({
+        variables: {
+          profileId: profile._id,
+          userBio
+        }
+      });
+      console.log(userBio);
+      setUserBio('');
+
     } catch (err) {
       console.error(err)
     }
   }
+
+
+
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -135,6 +185,7 @@ const UpdateProfile = (props) => {
           What would you like to do, {profile.firstName}?
         </Text>
       </Heading>
+
 
       <FormControl>
         <FormLabel>First Name:</FormLabel>
@@ -171,6 +222,8 @@ const UpdateProfile = (props) => {
           ></Input>
         <Button onClick={() => handleProfileUpdate()} margin="2%" bg={'orange.300'}>Update Name</Button>
       </FormControl>
+
+
 
       <FormControl>
         <Center>

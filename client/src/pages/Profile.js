@@ -1,28 +1,35 @@
 import React from 'react';
-
-// imported from chakra UI
+import auth from '../utils/auth';
+import { useQuery } from '@apollo/client';
+import { QUERY_SINGLE_PROFILE } from '../utils/queries';
+import './styles.css'
+// Import elements from chakra UI
 import {
   Box,
   Image,
-  List,
-  ListItem,
   Center,
   Divider,
-  Button,
   Flex,
   Heading,
   Stack,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-  SimpleGrid
+  Text
 } from '@chakra-ui/react';
 
 function Profile() {
+  let userProfile = auth.getProfile();
+  let profileId = userProfile.data._id;
+  const { loading, data } = useQuery(QUERY_SINGLE_PROFILE, {
+    variables: { profileId: profileId },
+  });
+  const profile = data?.profile || {};
+  if (loading) {
+    return <div>Loading ... Please Wait a Moment</div>
+  }
+
   return (
     <div>
       <Center>
-        <Box bg='orange.400' w='50%' p={4} color='white' borderRadius='full'>
+        <Box bg='orange.300' w='20%' p={4} borderRadius='full' className='profile-box'>
           Your Profile
         </Box>
       </Center>
@@ -39,59 +46,47 @@ function Profile() {
                 _after={{
                   content: "''",
                   width: 'full',
-                  height: useBreakpointValue({ base: '20%', md: '30%' }),
                   position: 'absolute',
                   bottom: 1,
                   left: 0,
                   bg: 'orange.400',
                   zIndex: -1,
                 }}>
-                Placeholder for name
+                Welcome, {profile.firstName} {profile.lastName}!
               </Text>
               <br />{' '}
-              <Text color={'orange.400'} as={'span'}>
-                Bio
-              </Text>{' '}
             </Heading>
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-              The project board is an exclusive resource for contract work. It's
-              perfect for freelancers, agencies, and moonlighters.
+              {profile.userBio}
             </Text>
-            <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+            <Stack direction={{ base: 'column', md: 'row' }} spacing={4} align={'center'} justify={'center'}>
               <Box>
                 <Text
                   fontSize={{ base: '16px', lg: '18px' }}
-                  color={useColorModeValue('orange.500', 'orange.300')}
+                  color={'orange.300'}
                   fontWeight={'500'}
                   textTransform={'uppercase'}
-                  mb={'4'}>
+                  mb={'14'}>
                   Interests
                 </Text>
-                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                  <List spacing={2}>
-                    <ListItem>Sports</ListItem>
-                    <ListItem>Coding</ListItem>{' '}
-                    <ListItem>Hiking</ListItem>
-                  </List>
-                  <List spacing={2}>
-                    <ListItem>Coffee</ListItem>
-                    <ListItem>Long walks</ListItem>
-                    <ListItem>Reading</ListItem>
-                  </List>
-                </SimpleGrid>
+                {profile.interests?.map((interest) => <Text
+                  fontSize={{ base: '16px', lg: '18px' }}
+                  fontWeight={'500'}
+                  textTransform={'uppercase'}
+                  mb={'10'}
+                >{interest}</Text>)}
               </Box>
             </Stack>
-            <Button rounded={'full'}>Edit your interests</Button>
           </Stack>
         </Flex>
         <Flex flex={1}>
           <Image
-            alt={'Login Image'}
+            alt={'image depicting a person jumping in the middle of the road'}
             objectFit={'cover'}
             borderRadius='full'
             boxSize='550px'
             src={
-              'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+              'https://images.unsplash.com/photo-1492567291473-fe3dfc175b45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80'
             }
           />
         </Flex>

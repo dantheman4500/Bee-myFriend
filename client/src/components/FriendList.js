@@ -45,7 +45,7 @@ const FriendList = ({ profiles, title }) => {
                     src={
                       profile.image
                     }
-                    alt={'Author'}
+                    alt={'image depicting a bumblebee icon'}
                     css={{
                       border: '2px solid white',
                     }}

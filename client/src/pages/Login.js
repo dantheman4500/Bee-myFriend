@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-
-
+import Auth from '../utils/auth';
 import {
   FormControl,
   FormLabel,
@@ -12,8 +11,6 @@ import {
   Button,
   Heading,
 } from '@chakra-ui/react'
-
-import Auth from '../utils/auth';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -28,7 +25,6 @@ const Login = (props) => {
       [name]: value,
     });
   };
-
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -42,7 +38,6 @@ const Login = (props) => {
     } catch (e) {
       console.error(e);
     }
-
     // clear form values
     setFormState({
       email: '',
@@ -94,7 +89,8 @@ const Login = (props) => {
                   height='48px'
                   width='200px'
                   border='2px'
-                  borderColor='tomato'
+                  borderColor='orange.400'
+                  bg="orange.300"
                   type="submit"
                 >
                   Login

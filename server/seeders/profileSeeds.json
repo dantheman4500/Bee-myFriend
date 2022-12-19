@@ -1,73 +1,282 @@
 [
-    {
-      "name": "Brian Kernighan",
-      "email": "bkernighan@techfriends.dev",
-      "password": "password01",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["coding", "food"]
-    },
-    {
-      "name": "Max Kanat-Alexander",
-      "email": "mkanatalexander@techfriends.dev",
-      "password": "password02",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["hiking", "food"]
-    },
-    {
-      "name": "Amiko",
-      "email": "amiko@techfriends.dev",
-      "password": "password03",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["coding", "hiking"]
-    },
-    {
-      "name": "Kent Beck",
-      "email": "kbeck@techfriends.dev",
-      "password": "password04",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["sewing", "beach"]
-    },
-    {
-      "name": "Edward V. Berard",
-      "email": "evberard@techfriends.dev",
-      "password": "password05",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["sewing", "hiking"]
-    },
-    {
-      "name": "Alan Kay",
-      "email": "akay@techfriends.dev",
-      "password": "password06",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["coding", "beach"]
-    },
-    {
-      "name": "C.A.R. Hoare",
-      "email": "choare@techfriends.dev",
-      "password": "password07",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["beach", "food"]
-    },
-    {
-      "name": "David Thomas",
-      "email": "dthomas@techfriends.dev",
-      "password": "password08",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["coding", "travel"]
-    },
-    {
-      "name": "Donald Knuth",
-      "email": "dknuth@techfriends.dev",
-      "password": "password09",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["computers", "food"]
-    },
-    {
-      "name": "Lernantino",
-      "email": "lernantino@techfriends.dev",
-      "password": "password10",
-      "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
-      "interests": ["travel", "food"]
-    }
-  ]
-  
+  {
+    "firstName": "Brian",
+    "lastName": "Kernighan",
+    "email": "bkernighan@techfriends.dev",
+    "userBio": "Professor of Computer Science at Princeton University since 2000",
+    "password": "password01",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coding",
+      "food",
+      "teaching"
+    ]
+  },
+  {
+    "firstName": "Max",
+    "lastName": "Kanat-Alexander",
+    "email": "mkanatalexander@techfriends.dev",
+    "password": "password02",
+    "userBio": "Technical Lead for Code Health at Google and former Chief Architect of the Bugzilla Project",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "hiking",
+      "food",
+      "reading",
+      "writing"
+    ]
+  },
+  {
+    "firstName": "Amiko",
+    "lastName": "B",
+    "email": "amiko@techfriends.dev",
+    "password": "password03",
+    "userBio": "Just a random guy tring to solve problems one at a time!",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coding",
+      "hiking"
+    ]
+  },
+  {
+    "firstName": "Alberto",
+    "lastName": "Harrison",
+    "email": "Harrison@techfriends.dev",
+    "userBio": "Loves to play video games!",
+    "password": "password101",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "gaming",
+      "video games",
+      "coding",
+      "food",
+      "teaching"
+    ]
+  },
+  {
+    "firstName": "Jose",
+    "lastName": "T Hoag",
+    "email": "JTHoag@techfriends.dev",
+    "userBio": "I may not be perfect, but my dog thinks I am to die for",
+    "password": "password01",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "music",
+      "martial arts",
+      "dogs",
+      "dog",
+      "skiing",
+      "coding",
+      "food",
+      "teaching"
+    ]
+  },
+  {
+    "firstName": "Brittani",
+    "lastName": "Hughes",
+    "email": "bhughes@gmail.com",
+    "userBio": "Don't ever blame yourself if people can't accept you for who you are.",
+    "password": "password1994",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coding",
+      "food",
+      "teaching",
+      "social media fanatic",
+      "enterpreneur",
+      "camping",
+      "playing an instrument",
+      "guitar",
+      "flute",
+      "rapping"
+    ]
+  },
+  {
+    "firstName": "Margaret",
+    "lastName": "Bowers",
+    "email": "mb1992@aol.com",
+    "userBio": "I'm finishing off this bottle of wine because you never know when an asteroid is gonna hit and I'd hate to waste the $6.49 I spent on it.",
+    "password": "password166",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "quilting",
+      "food",
+      "floral arranging",
+      "folk music",
+      "swimming",
+      "beach",
+      "walk",
+      "running",
+      "fitness"
+    ]
+  },
+  {
+    "firstName": "Kathleen",
+    "lastName": "Hill",
+    "email": "kingofthehill@fakemeail.com",
+    "userBio": "Excuse me Ladies, but my eyes are up here.",
+    "password": "passwordisstrong",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "monty python and the holy grail",
+      "money",
+      "food",
+      "cycling"
+    ]
+  },
+  {
+    "firstName": "Everett",
+    "lastName": "Weller",
+    "email": "idonthaveone@myemail.com",
+    "userBio": "I was having a fantastic nap on the way to work this morning, until some inconsiderate ba$tard decided to bounce off my windshield.",
+    "password": "forestgump94",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "rock",
+      "bowling",
+      "hiking",
+      "rock music",
+      "linkin park",
+      "meatballs",
+      "snowboarding"
+    ]
+  },
+  {
+    "firstName": "Ronnie",
+    "lastName": "Halliburton",
+    "email": "ayla.connel@gmail.com",
+    "userBio": "I'll date anyone who isn't an idiot, hints the reason I'm still single.",
+    "password": "password01",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "arts",
+      "design",
+      "entertainment",
+      "golfing",
+      "bird watching",
+      "metalworking",
+      "read",
+      "infleuncing",
+      "influencer"
+    ]
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Miller",
+    "email": "bernie.spin@hotmail.com",
+    "userBio": "After years of hearing it, for once I would like to be the one saying, “Now get the hell out of my office!”",
+    "password": "password201",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "rock",
+      "mineral",
+      "mineral collecting",
+      "geo",
+      "pokemon",
+      "gymnastics",
+      "watching tv"
+    ]
+  },
+  {
+    "firstName": "Keith",
+    "lastName": "J Cross",
+    "email": "bradly2017@hotmail.com",
+    "userBio": "Hiding in the restroom at work, just to post this (;",
+    "password": "password52",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coding",
+      "food",
+      "teaching",
+      "movie",
+      "movie watching",
+      "netflix",
+      "chill",
+      "astronomy",
+      "physics"
+    ]
+  },
+  {
+    "firstName": "Eduardo",
+    "lastName": "N Titus",
+    "email": "verner1973@gmail.com",
+    "userBio": "Anyone know how to get blood stains out of carpet? Totally unrelated, but I also am looking for a new girlfriend.",
+    "password": "password52",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "web",
+      "web surfing",
+      "web junkie",
+      "travel",
+      "sculpting",
+      "hulu",
+      "hang out",
+      "Genealogy",
+      "chemistry",
+      "csi",
+      "supernatural",
+      "anime"
+    ]
+  },
+  {
+    "firstName": "Erlinda",
+    "lastName": "Madden",
+    "email": "hope1974@hotmail.com",
+    "userBio": "Dear Websites that automatically play loud videos, thanks for trying to get me fired!",
+    "password": "passwordnotgood",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "coffee",
+      "internet",
+      "troll",
+      "lord of the rings",
+      "birdwatching",
+      "amazon",
+      "hikes",
+      "wrestling",
+      "language",
+      "cops",
+      "computers"
+    ]
+  },
+  {
+    "firstName": "Ramon",
+    "lastName": "A Joe",
+    "email": "selena1996@yahoo.com",
+    "userBio": "I very much wished not to be noticed",
+    "password": "passwordnotgood",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "space",
+      "minecraft",
+      "boxing",
+      "ufc",
+      "cats",
+      "cat",
+      "Sonic",
+      "wrestling",
+      "language",
+      "Cops",
+      "the Hobbit",
+      "marine"
+    ]
+  },
+  {
+    "firstName": "Diane",
+    "lastName": "M Valle",
+    "email": "ambrose2009@hotmail.com",
+    "userBio": "thinks that thinking about the thoughts of thinking are too thinkable for thoughts to be thought about thinking, I think",
+    "password": "passwordnotgood",
+    "image": "https://i.postimg.cc/05FH7GZS/251.jpg",
+    "interests": [
+      "philosophy",
+      "pottery",
+      "organizer",
+      "browsing pinterest",
+      "food",
+      "knitting",
+      "sewing",
+      "army"
+    ]
+  }
+]

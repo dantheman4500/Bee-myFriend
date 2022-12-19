@@ -1,0 +1,22 @@
+.search-text{
+    padding: 4%;
+    margin-top: 1%;
+    align-self: center;
+}   
+
+.search-icon, .bee-icon {
+    display: inline;
+    margin-right: 3%;
+}
+
+.search-input {
+    margin-bottom: 3%;
+}
+
+.friend-interest {
+    margin-bottom: 3%;
+}
+
+.search-div {
+    margin-right: 10%;
+}
