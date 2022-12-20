@@ -137,39 +137,57 @@ const UpdateProfile = (props) => {
       </Heading>
 
       <FormControl>
-        <FormLabel>First Name:</FormLabel>
+        <Center> <FormLabel>Update First Name:</FormLabel></Center>
+        <Center>
           <Input
             value={firstName}
             onChange={(e) => setfirstName(e.target.value)}
             placeholder="Enter New First Name"
             name="firstName"
             type="firstName"
+            width={'40%'}
           ></Input>
-          <FormLabel>First Name:</FormLabel>
+        </Center>
+        <Center>
+          <FormLabel>Update Last Name:</FormLabel>
+        </Center>
+        <Center>
           <Input
             value={lastName}
             onChange={(e) => setlastName(e.target.value)}
             placeholder="Enter New Last Name"
             name="lastName"
             type="lastName"
+            width={'40%'}
           ></Input>
-          <FormLabel>First Name:</FormLabel>
+        </Center>
+        <Center>
+          <FormLabel>Update Your Email</FormLabel>
+        </Center>
+        <Center>
           <Input
             value={email}
             onChange={(e) => setemail(e.target.value)}
             placeholder="Enter New Email"
             name="email"
             type="email"
+            width={'40%'}
           ></Input>
-          <FormLabel>First Name:</FormLabel>
+        </Center>
+        <Center>
+          <FormLabel>Update Your Password</FormLabel>
+        </Center>
+        <Center>
           <Input
             value={password}
             onChange={(e) => setpassword(e.target.value)}
             placeholder="Enter New Password"
             name="password"
             type="password"
+            width={'40%'}
           ></Input>
-        <Button onClick={() => handleProfileUpdate()} margin="2%" bg={'orange.300'}>Update Name</Button>
+        </Center>
+        <Button onClick={() => handleProfileUpdate()} margin="2%" bg={'orange.300'}>Update all the above</Button>
       </FormControl>
 
       <FormControl>
