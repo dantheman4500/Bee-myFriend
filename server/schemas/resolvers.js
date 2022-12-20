@@ -51,7 +51,7 @@ const resolvers = {
         line_items,
         mode: 'payment',
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${url}/donate`
+        cancel_url: `${url}/`
       });
 
       return { session: session.id };
@@ -102,7 +102,19 @@ const resolvers = {
         { userBio: userBio },
         { new: true }
       )
-    }
+    },
+    updateUser: async (parent, {profileId, firstName, lastName, email, password}, context) => {
+      return await Profile.findByIdAndUpdate(
+        {_id: profileId},
+        { 
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          password: password
+        },
+        { new: true }
+        )
+    },
   }
 }
 

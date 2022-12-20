@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_SINGLE_PROFILE } from '../utils/queries'
-import { ADD_INTEREST, DELETE_PROFILE, UPDATE_BIO } from '../utils/mutations';
+import { ADD_INTEREST, DELETE_PROFILE, UPDATE_BIO, UPDATE_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 // imported elements from chakra UI
 import {
@@ -89,6 +89,33 @@ const UpdateProfile = (props) => {
       console.error(err)
     }
   }
+
+  const [firstName, setfirstName] = useState('');
+  const [lastName, setlastName] = useState('');
+  const [email, setemail] = useState('');
+  const [password, setpassword] = useState('');
+  const [updateProfile, { errr }] = useMutation(UPDATE_USER);
+  const handleProfileUpdate = async (event) => {
+    try {
+      const { data } = await updateProfile({
+        variables: {
+          profileId: profile._id,
+          firstName,
+          lastName,
+          email,
+          password
+        }
+      });
+      console.log(firstName);
+      setfirstName('');
+      setlastName('');
+      setemail('');
+      setpassword('');
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -108,6 +135,43 @@ const UpdateProfile = (props) => {
           What would you like to do, {profile.firstName}?
         </Text>
       </Heading>
+
+      <FormControl>
+        <FormLabel>First Name:</FormLabel>
+          <Input
+            value={firstName}
+            onChange={(e) => setfirstName(e.target.value)}
+            placeholder="Enter New First Name"
+            name="firstName"
+            type="firstName"
+          ></Input>
+          <FormLabel>First Name:</FormLabel>
+          <Input
+            value={lastName}
+            onChange={(e) => setlastName(e.target.value)}
+            placeholder="Enter New Last Name"
+            name="lastName"
+            type="lastName"
+          ></Input>
+          <FormLabel>First Name:</FormLabel>
+          <Input
+            value={email}
+            onChange={(e) => setemail(e.target.value)}
+            placeholder="Enter New Email"
+            name="email"
+            type="email"
+          ></Input>
+          <FormLabel>First Name:</FormLabel>
+          <Input
+            value={password}
+            onChange={(e) => setpassword(e.target.value)}
+            placeholder="Enter New Password"
+            name="password"
+            type="password"
+          ></Input>
+        <Button onClick={() => handleProfileUpdate()} margin="2%" bg={'orange.300'}>Update Name</Button>
+      </FormControl>
+
       <FormControl>
         <Center>
           <FormLabel>Add more interests?</FormLabel>

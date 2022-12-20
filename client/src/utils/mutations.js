@@ -81,21 +81,24 @@ export const UPDATE_BIO = gql`
 
 export const UPDATE_USER = gql`
   mutation updateUser(
-    $firstName: String!
-    $lastName: String!
-    $email: String!
+    $profileId: ID!,
+    $firstName: String!,
+    $lastName: String!,
+    $email: String!,
     $password: String!
   ) {
     updateUser(
-      firstName: $firstName
-      lastName: $lastName
-      email: $email
+      profileId: $profileId,
+      firstName: $firstName,
+      lastName: $lastName,
+      email: $email,
       password: $password
     ) {
-      token
-      user {
         _id
-      }
+        firstName
+        lastName
+        email
+        password
     }
   }
 `;
